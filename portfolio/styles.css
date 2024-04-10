@@ -1,0 +1,248 @@
+
+@media only screen and (max-width: 600px) {
+  p,.iframe-container,hr{
+    margin: 5px!important;
+  }
+  footer{
+    grid-column: 2/-1 !important;
+  }
+  h2{
+    font-size: 16px;
+  }
+     
+}
+@media only screen and (max-width: 900px) {
+  
+  header{
+    grid-column: 2 !important;
+    font-size: 12px !important;
+  }
+  
+  p,.iframe-container,hr{
+    margin: 5px!important;
+  }
+}
+@keyframes textRotate {
+
+10%{
+    transform: translateY(-112%);
+}
+25%{
+    transform: translateY(-95%);
+}
+35%{
+    transform: translateY(-212%);
+}
+50%{
+    transform: translateY(-190%);
+}
+60%{
+    transform: translateY(-312%);
+}
+75%{
+    transform: translateY(-290%);
+}
+85%{
+    transform: translateY(-412%);
+}
+100%{
+    transform: translateY(-390%);
+}
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: grid; 
+  grid-template-columns:0.5fr 2fr auto; 
+  grid-template-rows: 1fr 3fr auto; /* Header, Main Content, Footer */
+  color: black;
+  height: 100vh; /* Ensure the grid fills the viewport */
+  background-color: #f4f4f4;
+}
+
+.dark-mode {
+  background-size: cover; 
+  color: white;
+  background-color: black;
+}
+
+
+
+header {
+  /*display: flex;
+  justify-content: space-between;
+  justify-items: center;*/
+  grid-row: 1; /* Header goes to the first row */
+  grid-column: 2;
+  /*padding: 20px;8*/
+  text-align: center;
+  font-size: 1.2rem;
+  margin:auto
+}
+.wrapper{
+  box-sizing: content-box;
+  display: flex;
+  justify-content:center;
+  height: 75px;
+  
+}
+
+.descriptions{
+  overflow: hidden;
+  height:100%;
+  
+  
+}
+.descriptions span{
+  display:block;
+  height: 100%;
+  font-weight: 600;
+  color: #1400cc;
+  padding:10px 0;
+  animation: textRotate 15s infinite ease-in-out;
+}
+.descriptions span:nth-child(1),.descriptions span:nth-child(5){
+  margin-left: 5px;
+}
+
+h1{
+  font-family: Georgia, serif;
+  line-height: 50px;
+}
+/*.header-content,nav {
+  margin: 10px auto;
+}*/
+
+nav {
+  grid-row:1;
+  grid-column: 3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start ;
+  flex-direction: column;
+  margin-right: 10px;
+  text-align: right; 
+  
+}
+/*body.dark-mode nav {
+  background-color: #555; /* Darker background color in dark mode */
+
+nav a {
+  color:#00CCCC;
+  text-decoration: none;
+  padding: 4% 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #CCCCCC;
+  /*background-color: #7c7a7a;*/
+}
+aside{
+  grid-row: 1/-1;
+  grid-column: 1;
+  background-image: url(./images/rose_1.jpg);
+  background-size: contain;
+  background-repeat:repeat;
+  padding: 15px;
+  
+}
+main {
+  grid-row: 2; /* Main content goes to the second row */
+  grid-column: 2/-1;
+  padding: 20px;
+ }
+
+h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-bottom: 25px;
+  
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  line-height: 1.8;
+  margin: 10px 10px 10px 140px;
+  
+
+  
+}
+
+main a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+hr{
+  border:solid 0.5px #724A72;
+  margin-left:150px;
+  margin-right:50px;
+  
+}
+.big-letter::first-letter{
+  font-size: 2rem;
+  color: #724A72;
+  float: left;
+  margin-right: 2px;
+  line-height: 0.5;
+}
+
+footer {
+  grid-row: 3; 
+  grid-column:1/4;
+  padding: 20px;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  text-align: center;
+
+}
+
+button {
+  background-color:  #724A72 ;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: right;
+}
+
+button:hover {
+  background-color: #AB5474;
+  color: white;
+}
+/* Style the iframe container */
+.iframe-container {
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 8px; /* Add rounded corners */
+}
+  
+
+
+/* Style the iframe itself */
+iframe {
+  width: 100%; /* Make the iframe fill its container */
+  height: 400px; /* Set a fixed height or adjust dynamically */
+  border: none; /* Remove default iframe border */
+  
+}
+.iframe-container{
+  margin-left: 140px;
+  margin-right: 10px;
+}
