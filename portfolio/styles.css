@@ -1,0 +1,283 @@
+@media only screen and (max-width: 600px) {
+  p,.iframe-container,hr{
+    margin: 5px!important;
+  }
+  footer{
+    grid-column: 2/-1 !important;
+  }
+  h2{
+    font-size: 16px;
+  }
+     
+}
+@media only screen and (max-width: 900px) {
+  
+  header{
+    grid-column: 2 !important;
+    
+  }
+  h1{
+    font-size: 3.2rem !Important;
+  }
+  h2{
+    font-size: 16px !important;
+  }
+  p{
+    font-size: 0.5rem I !important;
+  }
+  p,.iframe-container,hr{
+    margin: 5px!important;
+  }
+  .wrapper{
+    font-size: 1.2rem !important;
+  }
+  .emphasize{
+    font-size: 1.2rem !important;
+  }
+
+}
+@keyframes textRotate {
+
+10%{
+    transform: translateY(-112%);
+}
+25%{
+    transform: translateY(-95%);
+}
+35%{
+    transform: translateY(-212%);
+}
+50%{
+    transform: translateY(-190%);
+}
+60%{
+    transform: translateY(-312%);
+}
+75%{
+    transform: translateY(-290%);
+}
+85%{
+    transform: translateY(-412%);
+}
+100%{
+    transform: translateY(-390%);
+}
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  /*min-height: 100vh;*/ /*Do I need min-height?*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: grid; 
+  grid-template-columns:0.5fr 2fr auto; 
+  grid-template-rows: 1fr 3fr auto; 
+  height: 100vh; 
+  background-color: #f4f4f4;
+  color:#333;
+  line-height: 1.6;
+}
+
+.dark-mode {
+  color: white;
+  background-color: black;
+}
+
+header {
+  grid-row: 1; 
+  grid-column: 2;
+  text-align: center;
+  margin:auto
+}
+
+.wrapper{
+  box-sizing: content-box;
+  display: flex;
+  justify-content:center;
+  height: 75px;
+  font-size: 1.8rem;
+  
+}
+.emphasize{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.descriptions{
+  overflow: hidden;
+  height:100%;
+  
+  
+}
+.descriptions span{
+  display:block;
+  height: 100%;
+  font-weight: 600;
+  color: #4169E1;
+  padding:10px 0;
+  animation: textRotate 15s infinite ease-in-out;
+}
+.descriptions span:nth-child(1),.descriptions span:nth-child(5){
+  margin-left: 5px;
+}
+
+h1{
+  font-family: Georgia, serif;
+  color:#FF69B4;
+  margin-bottom:15px;
+  font-size: 5.5rem;
+}
+
+.caveat-name {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+nav {
+  grid-row:1;
+  grid-column: 3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 5px;
+  display: flex;
+  justify-content: flex-start ;
+  flex-direction: column;
+  margin-right: 10px;
+  text-align: right; 
+  
+}
+
+nav a {
+  color:#FFA500;
+  text-decoration: none;
+  padding: 4% 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #CCCCCC;
+  
+}
+aside{
+  grid-row: 1/-1;
+  grid-column: 1;
+  background-image: url(./images/rose_1.jpg);
+  background-size: contain;
+  background-repeat:repeat;
+  padding: 15px;
+  
+}
+
+main {
+  grid-row: 2; 
+  grid-column: 2/-1;
+  padding: 20px;
+ }
+p{
+  margin-bottom: 20px;
+}
+h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  color: #4169E1;
+  
+}
+.passion-text {
+  font-weight: bold;
+  color: #FF69B4; 
+  margin-right: 5px; 
+}
+.math-text{
+  color: #4169E1;
+  font-style: italic;
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.8px;
+  line-height: 1.8;
+  margin: 10px 10px 10px 140px;
+  
+}
+
+main a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #4169E1;
+}
+
+main a:visited{
+  color: #FFA500;
+}
+hr{
+  border: none;
+  height: 3px;
+  margin-right:50px;
+  margin-left: 140px;
+  margin-right: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+  background: linear-gradient(to right, #FFA500, #FF69B4);
+  
+}
+
+.big-letter::first-letter{
+  font-size: 3rem;
+  font-weight: 400;
+  color: #FFA500;
+  float: left;
+  margin-right: 2px;
+  line-height: 0.3;
+}
+
+footer {
+  grid-row: 3; 
+  grid-column:2/4;
+  padding: 20px;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  text-align: center;
+
+}
+
+button {
+  background-color:  #724A72 ;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  margin-top: 5px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: right;
+}
+
+button:hover {
+  background-color: #AB5474;
+  color: white;
+}
+
+.iframe-container {
+  border: 1px solid #ccc; 
+  border-radius: 8px;
+}
+
+iframe {
+  width: 100%; 
+  height: 400px; 
+  border: none; 
+  
+}
+.iframe-container{
+  margin-left: 140px;
+  margin-right: 10px;
+}
