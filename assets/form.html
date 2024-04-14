@@ -1,0 +1,74 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Neighbourhood Survey</h1>
+  </header>
+  <form id="survey-form">
+
+    <div class="container">
+      <div>
+        <label for="name">Provide your first and the last name</label>
+        <input id="name" type="text" required placeholder="Enter your name">
+      </div>
+      <div>
+        <label for="email">E-mail</label>
+        <input id="email" type="email" required placeholder="Enter your e-mail address">
+      </div>
+      <div>
+        <label for="number">How many years have you been living in the neighbourhood?</label>
+        <input id="number" type="number" placeholder="years" min="1" max="100">
+      </div>
+      <div>
+        <label for="dropdown">How would you rate the cleanliness and upkeep of public spaces in your
+          neighborhood?</label>
+        <select id="dropdown" required>
+          <option disabled selected value>select an option</option>
+          <option>Extremely Satisfied</option>
+          <option>Satisfied</option>
+          <option>Neutral</option>
+          <option>Dissatisfied</option>
+          <option>Extremely dissatisfied</option>
+        </select>
+      </div>
+      <div>
+        <p class ="options">How safe do you feel in your neighborhood?</p>
+        <label for="safe">
+          <input type="radio" id="safe" checked name="security" value="safe"> Safe</label>
+        <label for="unsafe">
+          <input type="radio" id="unsafe" name="security" value="unsafe"> Unsafe</label>
+      </div>
+      <div>
+        <p>Which features best describe your neighborhood? (Select all that apply)</p>
+        <label><input type="checkbox" value="quiet">
+          Quiet streets</label>
+        <label><input type="checkbox" value="green">
+          Green spaces</label>
+        <label><input type="checkbox" value="pet-friendly">
+          Pet-friendly
+        </label>
+        <label><input type="checkbox" value="close-knit">
+          Close-knit community</label>
+      </div>
+      <div>
+        <p>Any comments or suggestions for improvements in the neighborhood?</p>
+        <textarea id="text" placeholder="enter your comment here...">
+      </textarea>
+      </div>
+      <div>
+        <button id="submit">Submit
+        </button>
+      </div>
+    </div>
+  </form>
+
+</body>
+
+</html>
